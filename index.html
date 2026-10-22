@@ -3,98 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Padaria em Londrina</title>
+    <title>Destaques — Padaria Pão &amp; Cia</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- CABEÇALHO: identidade + menu de navegação -->
     <header class="cabecalho">
         <h1>Padaria Pão &amp; Cia</h1>
         <p class="subtitulo">A melhor padaria de Londrina</p>
         <nav class="menu">
-            <a href="#destaques">Destaques</a>
-            <a href="#cardapio">Cardápio</a>
-            <a href="#contato">Contato</a>
+            <a href="index.html">Início</a>
+            <a href="cardapio.html">Cardápio</a>
+            <a href="destaques.html">Destaques</a>
+            <a href="index.html#contato">Contato</a>
         </nav>
     </header>
 
     <main>
 
-        <!-- APRESENTAÇÃO: tags de autoria (blockquote, cite, strong, em) -->
         <section class="intro">
-            <blockquote>
-                <p>"Feito com fermento natural e muito carinho, todos os dias."</p>
-                <cite>— Equipe da Padaria Pão &amp; Cia</cite>
-            </blockquote>
-            <p>Somos uma padaria artesanal em <strong>Londrina</strong>. Aqui você encontra
-               <em>doces, bolos, salgados e sobremesas</em> feitos na hora.</p>
+            <h2>Destaques do dia</h2>
+            <p>Os queridinhos da casa, fresquinhos todos os dias.</p>
         </section>
 
-        <!-- DESTAQUES: cards em Flexbox -->
-        <section id="destaques" class="destaques">
-            <h2>Destaques do dia</h2>
+        <!-- Cards de destaque (reaproveita o estilo .cards / .card) -->
+        <section class="destaques">
             <div class="cards">
                 <article class="card">
-                    <!-- Troque a URL abaixo pelo caminho da sua foto: src="img/pao-de-mel.jpg" -->
-                    <img src="paodemel.png" alt="Pão de mel artesanal coberto com chocolate">
+                    <span class="selo">Novo</span>
+                    <img src="img/pao-de-mel.jpg" alt="Pão de mel artesanal">
                     <h3>Pão de Mel Artesanal</h3>
                     <p>Massa macia com recheio de doce de leite.</p>
+                    <p><strong>R$ 8,00</strong></p>
                 </article>
                 <article class="card">
-                <img src="2150649376.jpg" alt="Fatia de bolo de fubá com goiabada">
+                    <span class="selo">Mais vendido</span>
+                    <img src="img/bolo-fuba.jpg" alt="Bolo de fubá com goiabada">
                     <h3>Bolo de Fubá com Goiabada</h3>
                     <p>O clássico da tarde, quentinho.</p>
+                    <p><strong>R$ 7,00</strong></p>
                 </article>
                 <article class="card">
-                <img src=Captura de tela_2026-08-06_09-29-01.png"Coxinha de frango com catupiry">
+                    <img src="img/coxinha.jpg" alt="Coxinha de frango com catupiry">
                     <h3>Coxinha com Catupiry</h3>
                     <p>Crocante por fora, cremosa por dentro.</p>
+                    <p><strong>R$ 8,00</strong></p>
                 </article>
             </div>
         </section>
 
-        <!-- CARDÁPIO: a tabela original, agora semântica e estilizada -->
-        <section id="cardapio" class="cardapio">
-            <h2>Cardápio completo</h2>
-            <table class="tabela-cardapio">
-                <caption>Nossos produtos por categoria</caption>
-                <thead>
-                    <tr>
-                        <th scope="col">Categoria</th>
-                        <th scope="col">Exemplo 1</th>
-                        <th scope="col">Exemplo 2</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Doces</strong></td>
-                        <td>Pão de Mel artesanal</td>
-                        <td>Brigadeiro Gourmet</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Bolos</strong></td>
-                        <td>Bolo de Fubá com Goiabada</td>
-                        <td>Bolo de Chocolate Supremo</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Salgados</strong></td>
-                        <td>Coxinha de Frango com Catupiry</td>
-                        <td>Pão de Queijo Mineiro</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Sobremesas</strong></td>
-                        <td>Pudim de Leite Condensado</td>
-                        <td>Taça da Felicidade</td>
-                    </tr>
-                </tbody>
-            </table>
+        <!-- RECEITAS EM VÍDEO -->
+        <section class="receitas">
+            <h2>Receitas em vídeo</h2>
+            <p>Aprenda a fazer nossos clássicos em casa.</p>
+
+            <div class="videos">
+
+                <!-- OPÇÃO 1: vídeo do YouTube (troque VIDEO_ID pelo código do vídeo) -->
+                <div class="video-item">
+                    <h3>Como fazer Pão de Mel</h3>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/VIDEO_ID"
+                                title="Receita de pão de mel"
+                                allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <!-- OPÇÃO 2: vídeo próprio (arquivo .mp4 dentro da pasta img/) -->
+                <div class="video-item">
+                    <h3>Bolo de Fubá com Goiabada</h3>
+                    <video controls width="100%">
+                        <source src="img/receita-bolo-fuba.mp4" type="video/mp4">
+                        Seu navegador não suporta vídeo.
+                    </video>
+                </div>
+
+            </div>
         </section>
 
     </main>
 
-    <!-- RODAPÉ -->
-    <footer id="contato" class="rodape">
+    <footer class="rodape">
         <p>Rua das Flores, 123 — Londrina/PR · (43) 99999-0000</p>
         <p><small>Site desenvolvido pelos alunos do CEEP Castaldi · 2026</small></p>
     </footer>
